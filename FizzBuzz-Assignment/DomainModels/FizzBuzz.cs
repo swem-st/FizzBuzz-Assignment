@@ -15,7 +15,7 @@ public class FizzBuzz
     {
         foreach (var action in actions)
         {
-            if (action.AddNumber(number))
+            if (action.ApplyNumber(number))
             {
                 return action.ReceiveResult();
             }

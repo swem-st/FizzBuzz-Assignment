@@ -4,7 +4,7 @@ namespace FizzBuzz_Assignment.DomainModels;
 
 public class FizzBuzzAction: IFizzBuzzAction
 {
-    public bool AddNumber(int number)
+    public bool ApplyNumber(int number)
     {
         return number % 3 == 0 && number % 5 == 0;
     }

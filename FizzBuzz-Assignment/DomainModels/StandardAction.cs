@@ -5,20 +5,25 @@ namespace FizzBuzz_Assignment.DomainModels;
 // Fallback rule for numbers that don't meet any of the above conditions
 public class StandardAction : IFizzBuzzAction
 {
-    private readonly int number;
+    private int _number;
 
     public StandardAction(int number)
     {
-        this.number = number;
+        _number = number;
     }
 
-    public bool AddNumber(int number)
+    public bool ApplyNumber(int number)
     {
         return true;
     }
 
+    public void SetNumber(int number)
+    {
+        _number = number;
+    }
+
     public string ReceiveResult()
     {
-        return number.ToString();
+        return _number.ToString();
     }
 }

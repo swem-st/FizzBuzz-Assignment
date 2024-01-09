@@ -11,12 +11,13 @@ abstract class Program
         var fizzAction = new FizzAction();
         var buzzAction = new BuzzAction();
         var fizzBuzzAction = new FizzBuzzAction();
-        var standardRule = new StandardAction(0);
+        var standardAction = new StandardAction(0); // Instantiate StandardAction with any initial number
 
-        var fizzBuzz = new FizzBuzz(new IFizzBuzzAction[] { fizzBuzzAction, buzzAction, fizzAction, standardRule });
+        var fizzBuzz = new FizzBuzz(new IFizzBuzzAction[] { fizzBuzzAction, buzzAction, fizzAction, standardAction });
 
         for (int i = 1; i <= 100; i++)
         {
+            standardAction.SetNumber(i);
             Console.WriteLine(fizzBuzz.Execute(i));
         }
     }

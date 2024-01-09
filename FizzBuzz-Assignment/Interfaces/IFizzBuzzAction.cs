@@ -2,6 +2,6 @@ namespace FizzBuzz_Assignment.Interfaces;
 
 public interface IFizzBuzzAction
 {
-    bool AddNumber(int number);
+    bool ApplyNumber(int number);
     string ReceiveResult();
 }
